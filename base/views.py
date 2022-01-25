@@ -31,7 +31,6 @@ def room(request):
     return render(request, 'base/room.html')
 
 @csrf_exempt
-@csrf_exempt
 def createMember(request):
     data = json.loads(request.body)
     member, created = RoomeMember.objects.get_or_create(
